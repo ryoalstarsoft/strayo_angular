@@ -1,0 +1,29 @@
+<div class="dropDown next">
+  <span class="txtBig">Site:</span>
+  <a href="javascript:void(0)" class="siteDropdown">{{ (selectedSite$ | async)?.name() }}</a>
+  <div class="dropdownList">
+    <div class="searchSites clearfix">
+      <input #searchSite type="text" (keyup)="onSearchSite(searchSite.value)" class="inputSearch" placeholder="Search Sites">
+    </div>
+    <ul class="siteList">
+      <li *ngFor="let site of searchedSites$ | async">
+        <a [routerLink]="['/sites', site.id()]">{{site.name()}}</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="dropDown">
+  <span class="txtBig">Dataset:</span>
+  <a href="javascript:void(0)" class="siteDropdown">{{ (selectedDataset$ | async)?.name() }}</a>
+  <div class="dropdownList">
+    <div class="searchSites clearfix">
+      <input #searchDataset type="text" (keyup)="onSearchDataset(searchDataset.value)" class="inputSearch" placeholder="Search Datasets">
+    </div>
+    <ul class="siteList" *ngIf="selectedSite$ | async as site">
+      <li *ngFor="let dataset of searchedDatasets$ | async">
+        <a [routerLink]="['/sites', site.id(), 'datasets', dataset.id()]">{{dataset.name()}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

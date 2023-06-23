@@ -1,0 +1,123 @@
+<div class="main">
+  <div class="clearfix">
+    <span class="txtSaved">Saved Annotation</span>
+    <label class="switch fRight">
+      <input #toggleSaved class="switchBtn" type="checkbox" (change)="toggle(toggleSaved.checked)" checked>
+      <span class="switchSlider round"></span>
+    </label>
+  </div>
+  <div #annotationList class="bxSavedAnnotation clearfix">
+    <app-dataset-annotation *ngFor="let option of options$ | async " [dataset]="dataset" [annotation]="option.annotation">
+      <div class="checkbox checkbox-info">
+        <input type="checkbox" name="" id="" [(ngModel)]="option.checked" (change)="onChecked(option)">
+
+        <label></label>
+      </div>
+    </app-dataset-annotation>
+  </div>
+  <div *ngFor="let option of options$ | async">
+    <div *ngIf="option.checked">
+      <app-dataset-annotation-details *ngIf="option.provider else loading" [dataset]="dataset" [annotation]="option.annotation" [provider]="option.provider">
+      </app-dataset-annotation-details>
+    </div>
+  </div>
+</div>
+<ng-template>
+  Loading 3D Model...
+</ng-template>
+
+<!-- <div class="savedRow clearfix">
+    <div class="savedCol1">
+      <div class="checkbox checkbox-info">
+        <input type="checkbox" name="" id="">
+        <label></label>
+      </div>
+    </div>
+    <div class="savedCol2 polygon">Sample test 01</div>
+    <div class="savedCol3">
+      <a href="#">
+        <img src="/assets/images/editIcon.png" alt="">
+      </a>
+    </div>
+    <div class="savedCol4">
+      <a href="#">
+        <img src="/assets/images/delIcon.png" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="savedRow clearfix">
+    <div class="savedCol1">
+      <div class="checkbox checkbox-info">
+        <input type="checkbox" name="" id="">
+        <label></label>
+      </div>
+    </div>
+    <div class="savedCol2 horizontalLength">Sample test 01</div>
+    <div class="savedCol3">
+      <a href="#">
+        <img src="/assets/images/editIcon.png" alt="">
+      </a>
+    </div>
+    <div class="savedCol4">
+      <a href="#">
+        <img src="/assets/images/delIcon.png" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="savedRow clearfix">
+    <div class="savedCol1">
+      <div class="checkbox checkbox-info">
+        <input type="checkbox" name="" id="">
+        <label></label>
+      </div>
+    </div>
+    <div class="savedCol2 selection">Sample test 01</div>
+    <div class="savedCol3">
+      <a href="#">
+        <img src="/assets/images/editIcon.png" alt="">
+      </a>
+    </div>
+    <div class="savedCol4">
+      <a href="#">
+        <img src="/assets/images/delIcon.png" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="savedRow clearfix">
+    <div class="savedCol1">
+      <div class="checkbox checkbox-info">
+        <input type="checkbox" name="" id="">
+        <label></label>
+      </div>
+    </div>
+    <div class="savedCol2 relativeHeight">Sample test 01</div>
+    <div class="savedCol3">
+      <a href="#">
+        <img src="/assets/images/editIcon.png" alt="">
+      </a>
+    </div>
+    <div class="savedCol4">
+      <a href="#">
+        <img src="/assets/images/delIcon.png" alt="">
+      </a>
+    </div>
+  </div>
+  <div class="savedRow clearfix">
+    <div class="savedCol1">
+      <div class="checkbox checkbox-info">
+        <input type="checkbox" name="" id="">
+        <label></label>
+      </div>
+    </div>
+    <div class="savedCol2 polygon">Sample test 01</div>
+    <div class="savedCol3">
+      <a href="#">
+        <img src="/assets/images/editIcon.png" alt="">
+      </a>
+    </div>
+    <div class="savedCol4">
+      <a href="#">
+        <img src="/assets/images/delIcon.png" alt="">
+      </a>
+    </div>
+  </div> -->

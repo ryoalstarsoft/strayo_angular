@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strayos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="css/bundle.css">
+  <script src="js/modernizr-custom.js"></script>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body class="uploadProcess">
+  <div class="uploadContainer clearfix">
+    <div class="dvUploadProcess clearfix">
+      <a href="#" class="btnPageClose"><img src="images/pageCloseBtn.png" alt=""></a>
+      <h2 class="heading">Upload Project</h2>
+      <div class="processTab clearfix">
+        <ul class="clearfix">
+          <li>
+            <a href="upload-process.html" class="activeProcess first">
+              <span class="txtNum">01</span>
+              <span class="txtTab">Select Site</span>
+              <div class="arrow-down"></div>
+            </a>
+          </li>
+          <li>
+            <a href="add-images.html">
+              <span class="txtNum">02</span>
+              <span class="txtTab">Add Images</span>
+              <div class="arrow-down"></div>
+            </a>
+          </li>
+          <li>
+            <a href="review.html">
+              <span class="txtNum">03</span>
+              <span class="txtTab">Review</span>
+              <div class="arrow-down"></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="processContent clearfix">
+        <div class="row clearfix">
+          <div class="frmProssesRow clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <span class="frmLabel fLeft">Create new site</span>
+              <a href="#" class="txtLink fRight">Choose an existing site</a>
+              <input type="text" class="txtInput3" name="" placeholder="Enter New Site name">
+            </div>
+          </div>
+        </div>
+        <div class="row clearfix">
+          <div class="frmProssesRow clearfix">
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <span class="frmLabel">Select Date</span>
+              <input type="text" class="txtInput3 datePick" name="" placeholder="Enter Date" id="datepicker">
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <span class="frmLabel pt20">Location</span>
+              <input type="text" class="txtInput3" name="">
+            </div>
+          </div>
+        </div>
+        <div class="row clearfix">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="dvSwitchWrap clearfix">
+              <div class="dvSwitchWrapLeft">
+                <h4>Do you have GCP Data? <span>(Optional)</span></h4>
+                <h5>Upload a CSV file containing at least five GCP points with coordinates in one of following coordinate systems: NAD27, NAD83, WGS84, WGS72, EPSG:n, EPSGA:n, IGNF:xxx</h5>
+              </div>
+              <div class="dvSwitchWrapRight">
+                <label class="switch fRight">
+                  <input data-target="#dvGcpData" type="checkbox" class="switchBtn">
+                  <span class="switchSlider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="dvGcpData" class="clearfix" style="display:none;">
+          <div class="row top50 clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="clearfix">
+                <h4 class="fLeft">Here is sample GCP comma-sperated value(csv) file</h4>
+                <a href="#" class="txtLink fRight">Download our GCP file template</a>
+              </div>
+              <div class="gcpData clearfix">
+                <div class="table-responsive">
+                  <table width="100%" cellpadding="0" cellspacing="0" border="0" class="tblDataGrid">
+                    <tr>
+                      <th>GCP ID</th>
+                      <th>Longitude/Easting</th>
+                      <th>Lattitude/Northing</th>
+                      <th>Elevation</th>
+                    </tr>
+                    <tr>
+                      <td>gcp 1</td>
+                      <td>153.213344342</td>
+                      <td>-34.5213344342</td>
+                      <td>20.523</td>
+                    </tr>
+                    <tr>
+                      <td>gcp 1</td>
+                      <td>153.213344342</td>
+                      <td>-34.5213344342</td>
+                      <td>20.523</td>
+                    </tr>
+                    <tr>
+                      <td>gcp 1</td>
+                      <td>153.213344342</td>
+                      <td>-34.5213344342</td>
+                      <td>20.523</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row clearfix">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <div class="dragDropCont clearfix">
+                <p>Drag and drop files or <a href="#">browse</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row clearfix">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="dvSwitchWrap top50 clearfix">
+              <div class="dvSwitchWrapLeft">
+                <h4>Do you have project video? <span>(Optional)</span></h4>
+                <h5>Upload a video data file (e.g. Mp4, MPEG, .mov)</h5>
+              </div>
+              <div class="dvSwitchWrapRight">
+                <label class="switch fRight">
+                  <input data-target="#gcpVideo" type="checkbox" class="switchBtn">
+                  <span class="switchSlider round"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="gcpVideo" class="row clearfix" style="display: none;">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="dragDropCont clearfix">
+              <p>Drag and drop video files or <a href="#">browse</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="row clearfix">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="buttonRow clearfix">
+              <a href="add-images.html" class="btnNext">Next</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.strayos.js"></script>
+  <script>
+    $(function(){
+      $('#datepicker').datepicker({
+        format:'dd MM yyyy',
+        todayHighlight: true
+      });
+    });
+  </script>
+</body>
+</html>

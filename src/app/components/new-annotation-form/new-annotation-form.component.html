@@ -1,0 +1,26 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left"><strong>New Annotation</strong></h4>
+  <a type="button" class="btnClosePop closePop" aria-label="Close" (click)="bsModalRef.hide()">
+    <img src="/assets/images/btnCloseProject.png" alt="">
+  </a>
+</div>
+<div class="modal-body">
+  <form (ngSubmit)="onSubmit()" #annotationForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <div [hidden]="nameInput.valid || nameInput.pristine" class="alert alert-danger">
+        Name is required
+      </div>
+      <input type="text" class="form-control txtInput" id="name" required [(ngModel)]="name" name="name" #nameInput="ngModel">
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea cols="30" rows="3" class="form-control txtArea" id="notes" [(ngModel)]="notes" name="notes" #notesInput="ngModel"></textarea>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btnBlue" [disabled]="!annotationForm.form.valid">Save</button>
+      <a class="cancel closePop" (click)="bsModalRef.hide()">Cancel</a>
+    </div>
+  </form>
+</div>

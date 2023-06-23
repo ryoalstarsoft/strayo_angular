@@ -1,0 +1,42 @@
+<app-header>
+    <h1 class="logo">
+        <a [routerLink]="['/']"><img src="assets/images/strayos_logo.png" alt=""></a>
+      </h1>
+      <a href="javascript:void(0);" class="btnMobileNav"></a>
+
+</app-header>
+<div class="mainContent clearfix">
+  <div class="contentLeft">
+    <div class="tabs clearfix">
+      <a href="#MySites">My Sites</a>
+      <a href="#SharedSites">Shared Sites</a>
+    </div>
+    <div class="mySites clearfix">
+      <div id="MySites" class="tabContent clearfix">
+        <div class="searchSites clearfix">
+          <input #search type="text" (keyup)="onSearch(search.value)" class="inputSearch" placeholder="Search Sites">
+        </div>
+        <div *ngFor="let site of searchedSites$ | async">
+          <app-sitedetails [site]="site"></app-sitedetails>
+        </div>
+      </div>
+      <div id="SharedSites" class="tabContent clearfix">
+        <div class="searchSites clearfix">
+          <input #shareSearch type="text" (keyup)="onShareSearch(shareSearch.value)" class="inputSearch" placeholder="Search Sites">
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae praesentium, nobis nisi ratione! Distinctio,
+          veritatis maiores cum suscipit possimus architecto laudantium tenetur. Alias odit culpa quibusdam quas illo, incidunt
+          corporis!</p>
+      </div>
+    </div>
+    <div class="createSite">
+      <a href="#">Upload New Project</a>
+    </div>
+  </div>
+  <div class="contentRight">
+    <a href="javascript:void(0);" data-panel="contentLeft" data-panelClass="shrink" class="btnCollapse">
+      <img src="/assets/images/btnCollapse.png" alt="">
+    </a>
+    <app-sitemap></app-sitemap>
+  </div>
+</div>

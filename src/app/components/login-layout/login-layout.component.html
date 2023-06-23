@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <app-header></app-header>
+
+  <form (ngSubmit)="onSubmit()">
+    <p>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="john@gmail.com"
+        [(ngModel)]="user.email"
+      />
+    </p>
+    <p>
+      <input
+        id="password"
+        name="password"
+        type="password"
+        placeholder="********"
+        [(ngModel)]="user.password"
+      />
+    </p>
+    <button>LOGIN</button>
+  </form>
+
+  <app-footer></app-footer>
+</div>

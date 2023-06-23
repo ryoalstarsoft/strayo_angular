@@ -1,0 +1,22 @@
+<div class="project">
+  <div class="projectLeft">
+    <span class="color" [style]="color">&nbsp;</span>
+  </div>
+  <div class="projectRight">
+    <h4>
+      <a [routerLink]="['/sites', site.id(), 'datasets', dataset.id()]">{{dataset.name()}}</a>
+    </h4>
+    <div class="statusRow clearfix">
+      <div class="statusRowLeft">
+        <p><span>Added on:</span>
+          <span>{{dataset.createdAt() | date: 'd MMMM yyyy'}}</span>
+        </p>
+      </div>
+      <div class="statusRowRight">
+        <p>Status:
+          <a class="btnComplete" href="#">{{dataset.status()}}</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

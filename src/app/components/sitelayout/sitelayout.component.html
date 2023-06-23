@@ -1,0 +1,50 @@
+<app-header>
+  <h1 class="logo">
+    <a [routerLink]="['/']">
+      <img src="assets/images/strayos_logo.png" alt="">
+    </a>
+  </h1>
+  <a href="javascript:void(0);" class="btnMobileNav"></a>
+
+</app-header>
+<app-sub-header>
+  <div class="location">
+    <span>{{(site$ | async)?.location()}}</span>
+  </div>
+  <div class="projectSettings">
+    <span class="bttn btnShare"></span>
+    <span class="bttn btnSetting"></span>
+  </div>
+</app-sub-header>
+<div class="mainContent innerPage clearfix">
+  <div class="contentLeft">
+    <div class="dvProjectLeft clearfix">
+      <div *ngIf="site$ | async; let site; else loading">
+        <div *ngFor="let dataset of site.datasets()">
+          <app-dataset-details [dataset]="dataset" [site]="site"></app-dataset-details>
+        </div>
+      </div>
+    </div>
+    <div class="createSite">
+      <a href="#">Upload New Project</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- <div class="wrapper">
+  <app-header></app-header>
+  <div class="sidebar">
+    <div *ngIf="site$ | async; let site; else loading">
+      <div *ngFor="let dataset of site.datasets()">
+        <app-dataset-details [dataset]="dataset" [site]="site"></app-dataset-details>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    hello {{ site$ | async | json }}
+  </div>
+  <app-footer></app-footer>
+</div>
+
+<ng-template #loading>Loading Datasets...</ng-template> -->

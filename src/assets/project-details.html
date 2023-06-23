@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strayos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="css/bundle.css">
+  <script src="js/modernizr-custom.js"></script>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <header class="header clearfix">
+    <a class="backBtn" href="index.html"><img src="images/backArrowIcon.png" alt=""></a>
+    <div class="dropDown next">
+      <span class="txtBig">Site:</span>
+      <a href="#" class="siteDropdown">Buckley Central Stone Wall 01</a>
+      <div class="dropdownList">
+        <div class="searchSites clearfix">
+          <input type="text" class="inputSearch" placeholder="Search Sites">
+        </div>
+        <ul class="siteList">
+          <li><a href="index.html">Buckley Central Stone Wall 01</a></li>
+          <li><a href="index.html">Buckley Central Stone Wall 02</a></li>
+          <li><a href="index.html">Buckley Central Stone Wall 03</a></li>
+          <li><a href="index.html">Buckley Central Stone Wall 04</a></li>
+          <li><a href="index.html">Buckley Central Stone Wall 05</a></li>
+          <li><a href="index.html">Buckley Central Stone Wall 06</a></li>
+          <li><a href="index.html">Buckley Central Stone Wall 07</a></li>
+          <li><a href="index.html">Buckley Central Stone Wall 08</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="dropDown">
+      <span class="txtBig">Project:</span>
+      <a href="#" class="siteDropdown">Sample project 05</a>
+      <div class="dropdownList">
+        <div class="searchSites clearfix">
+          <input type="text" class="inputSearch" placeholder="Search Sites">
+        </div>
+        <ul class="siteList">
+          <li><a href="project.html">Sample project 01</a></li>
+          <li><a href="project.html">Sample project 02</a></li>
+          <li><a href="project.html">Sample project 03</a></li>
+          <li><a href="project.html">Sample project 04</a></li>
+          <li><a href="project.html">Sample project 05</a></li>
+          <li><a href="project.html">Sample project 06</a></li>
+          <li><a href="project.html">Sample project 07</a></li>
+          <li><a href="project.html">Sample project 08</a></li>
+        </ul>
+      </div>
+    </div>
+    <a href="javascript:void(0);" class="btnMobileNav"></a>
+    <div class="user">
+      <span></span>John Mathews
+      <div class="userAccount">
+        <ul>
+          <li><a href="#">My Account</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="dvBtnUpload">
+      <a class="btnUploadProject" href="#">Upload new project</a>
+    </div>
+  </header>
+  <div class="subHeader clearfix">
+    <div class="location">Troy Missouri</div>
+    <div class="projectSettings">
+      <span class="bttn btnDownload"></span>
+      <span class="bttn btnShare"></span>
+      <span class="bttn btnSetting"></span>
+    </div>
+  </div>
+  <div class="mainContent innerPage clearfix">
+    <div class="annotationLeftPanel">
+      <ul class="leftNav clearfix">
+        <li><a class="annotationLayers" href="annotation.html">Annotation &amp; Layers</a></li>
+        <li>
+          <a class="shotPlan subMenu btnNavigate" href="javascript:void(0);">Shot Plan</a>
+          <ul>
+            <li><a href="shot-planning.html">Shotplan Editor</a></li>
+          </ul>
+        </li>
+        <li>
+          <a class="burdenAnalysis subMenu btnNavigate" href="javascript:void(0);">Burden Analysis</a>
+          <ul>
+            <li><a href="javascript:void(0);" data-open="#Boretrak" class="openPop2">Select Boretrak file</a></li>
+            <li class="supList">
+              <a class="supMenu btnNavigate" href="javascript:void(0);">Boretrak Options</a>
+              <ul>
+                <li><a href="javascript:void(0);">Draw A-B Line</a></li>
+                <li><a href="javascript:void(0);" data-open="#ViewAzimuth" class="openPop2">View Azimuth</a></li>
+                <li><a href="javascript:void(0);">Reset A-B Line</a></li>
+                <li><a href="javascript:void(0);">Flip Shot</a></li>
+              </ul>
+            </li>
+            <li><a href="javascript:void(0);" data-open="#ChangeBoretrakType" class="openPop2">Change Boretrak type</a></li>
+            <li><a href="javascript:void(0);">Boretraking</a></li>
+            <li><a href="javascriptvoid(0);" data-open="#Boretrak2" class="openPop2">Boretrak every 2 unit</a></li>
+            <li><a href="javascript:void(0);" data-open="#BoretrakList" class="openPop2">Show Boretrak list</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="dvReset clearfix">
+        <a href="#">Reset</a>
+      </div>
+    </div>
+    <div class="contentRight">
+      <a href="javascript:void(0);" data-panel="annotationLeftPanel" data-panelClass="shrink" class="btnCollapse"><img src="images/btnCollapse.png" alt=""></a>
+      <div class="mapView">
+        <div class="mapviewBtn">
+          <ul>
+            <li><a href="#">2D Map</a></li>
+            <li><a href="#">3D Map</a></li>
+          </ul>
+        </div>
+        <a class="mapOptions" href="#"><img src="images/moreIcon2.png" alt=""></a>
+      </div>
+      <!-- Timeline -->
+      <div class="btnTimelineOuter">
+        <a class="btnTimeline" href="javascript:void(0);">Timeline</a>
+      </div>
+      <div class="timelineContOuter">
+        <div class="timelineCont">
+          <div id="timelineSlider" class="timelineSlider"></div>
+          <ul class="timelines">
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li class="bigLine">
+              <div class="timelineImg">
+                <div class="chkOuter">
+                  <div class="checkbox checkbox-info checkbox-circle">
+                    <input id="chk1" type="checkbox">
+                    <label></label>
+                  </div>
+                </div>
+                <div class="timelineImgCont">
+                  <img src="images/timelineImg.jpg" alt="">
+                </div>
+              </div>
+              <p class="date">15 July 2017</p>
+            </li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li class="bigLine">
+              <div class="timelineImg">
+                <div class="chkOuter">
+                  <div class="checkbox checkbox-info checkbox-circle">
+                    <input id="chk2" type="checkbox">
+                    <label></label>
+                  </div>
+                </div>
+                <div class="timelineImgCont">
+                  <img src="images/timelineImg.jpg" alt="">
+                </div>
+              </div>
+              <p class="date active">15 July 2017</p>
+            </li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li class="bigLine">
+              <div class="timelineImg">
+                <div class="chkOuter">
+                  <div class="checkbox checkbox-info checkbox-circle">
+                    <input id="chk3" type="checkbox">
+                    <label></label>
+                  </div>
+                </div>
+                <div class="timelineImgCont">
+                  <img src="images/timelineImg.jpg" alt="">
+                </div>
+              </div>
+              <p class="date">15 July 2017</p>
+            </li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li class="bigLine">
+              <div class="timelineImg">
+                <div class="chkOuter">
+                  <div class="checkbox checkbox-info checkbox-circle">
+                    <input id="chk4" type="checkbox">
+                    <label></label>
+                  </div>
+                </div>
+                <div class="timelineImgCont">
+                  <img src="images/timelineImg.jpg" alt="">
+                </div>
+              </div>
+              <p class="date">15 July 2017</p>
+            </li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li class="bigLine">
+              <div class="timelineImg">
+                <div class="chkOuter">
+                  <div class="checkbox checkbox-info checkbox-circle">
+                    <input id="chk5" type="checkbox">
+                    <label></label>
+                  </div>
+                </div>
+                <div class="timelineImgCont">
+                  <img src="images/timelineImg.jpg" alt="">
+                </div>
+              </div>
+              <p class="date">15 July 2017</p>
+            </li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li class="bigLine">
+              <div class="timelineImg">
+                <div class="chkOuter">
+                  <div class="checkbox checkbox-info checkbox-circle">
+                    <input id="chk6" type="checkbox">
+                    <label></label>
+                  </div>
+                </div>
+                <div class="timelineImgCont">
+                  <img src="images/timelineImg.jpg" alt="">
+                </div>
+              </div>
+              <p class="date">15 July 2017</p>
+            </li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+          </ul>
+        </div>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41306718.491304874!2d-130.17627876085862!3d50.809636822009345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4b0d03d337cc6ad9%3A0x9968b72aa2438fa5!2sCanada!5e0!3m2!1sen!2sin!4v1514717665807" frameborder="0" style="border:0" allowfullscreen class="map"></iframe>
+    </div>
+  </div>
+  <!-- Download Files -->
+  <div class="downloadProjectFiles">
+    <div class="DownloadWrap">
+      <a class="closeDownload" href="#"><img src="images/btnCloseProject.png" alt=""></a>
+      <h3>Download Project Files</h3>
+      <h4>Available Formats:</h4>
+      <div class="formatsRow clearfix">
+        <h5>Orthophoto</h5>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="GeoTIFF">
+          <label for="GeoTIFF">GeoTIFF (Large File Size)</label>
+        </div>
+      </div>
+      <div class="formatsRow clearfix">
+        <h5>Hillshade</h5>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="GeoPNG">
+          <label for="GeoPNG">GeoPNG</label>
+        </div>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="GeoTIFF">
+          <label for="GeoTIFF">GeoTIFF</label>
+        </div>
+      </div>
+      <div class="formatsRow clearfix">
+        <h5>Color Relief</h5>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="GeoPNG2">
+          <label for="GeoPNG2">GeoPNG</label>
+        </div>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="GeoTIFF2">
+          <label for="GeoTIFF2">GeoTIFF</label>
+        </div>
+      </div>
+      <div class="formatsRow clearfix">
+        <h5>Colored Hillshade</h5>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="GeoPNG3">
+          <label for="GeoPNG3">GeoPNG</label>
+        </div>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="GeoTIFF3">
+          <label for="GeoTIFF3">GeoTIFF</label>
+        </div>
+      </div>
+      <div class="formatsRow clearfix">
+        <h5>DSM Heightmap</h5>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="GeoTIFF4">
+          <label for="GeoTIFF4">GeoTIFF</label>
+        </div>
+      </div>
+      <div class="formatsRow clearfix">
+        <h5>Point Cloud</h5>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="LAS">
+          <label for="LAS">LAS</label>
+        </div>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="PLY">
+          <label for="PLY">PLY</label>
+        </div>
+      </div>
+      <div class="formatsRow clearfix">
+        <h5>3D Model</h5>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="TexturedObj">
+          <label for="TexturedObj">Textured Obj</label>
+        </div>
+      </div>
+      <div class="formatsRow clearfix">
+        <h5>Contours 1.000mm</h5>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="Shapefile">
+          <label for="Shapefile">Shapefile</label>
+        </div>
+        <div class="checkbox checkbox-info">
+          <input type="checkbox" name="" id="Geojson">
+          <label for="Geojson">Geojson</label>
+        </div>
+      </div>
+    </div>
+    <div class="downloadBtnOuter">
+      <a href="#" class="downloadBtn">Download</a>
+    </div>
+  </div>
+  <!--Boretrak Popup-->
+  <div id="Boretrak" class="selectModelPop" style="display: none;">
+    <a href="javascript:void(0);" data-target=".selectModelPop" class="closePop btnCloseSelectModel"><img src="images/btncloseGraph.png" alt=""></a>
+    <h5>Boretrak</h5>
+    <h6>Select Boretraking method</h6>
+    <div class="addHoleRow clearfix">
+      <div class="addHoleCol fLeft">
+        <a class="btnBlock" href="#">Cabled</a>
+      </div>
+      <div class="addHoleCol fRight">
+        <a class="btnBlock" href="#">Rodded</a>
+      </div>
+    </div>
+  </div>
+  <!--Boretrak 2 Popup-->
+  <div id="Boretrak2" class="selectModelPop" style="display: none;">
+    <a href="javascript:void(0);" data-target=".selectModelPop" class="closePop btnCloseSelectModel"><img src="images/btncloseGraph.png" alt=""></a>
+    <h5>Boretrak every 2 unit</h5>
+    <h6>Keep Original BorePoints ?</h6>
+    <div class="addHoleRow clearfix">
+      <div class="addHoleCol fLeft">
+        <a class="btnBlock" href="#">Modify</a>
+      </div>
+      <div class="addHoleCol fRight">
+        <a class="btnBlock" href="#">Keep Original</a>
+      </div>
+    </div>
+  </div>
+  <!--Boretrak List Popup-->
+  <div id="BoretrakList" class="selectModelPop" style="display: none;">
+    <a href="javascript:void(0);" data-target=".selectModelPop" class="closePop btnCloseSelectModel"><img src="images/btncloseGraph.png" alt=""></a>
+    <h5>Boretrak List</h5>
+    <div class="dvBoretrak clearfix">
+      <div class="boretrakRow clearfix">
+        <div class="boretrakLeft">Boretrak 01</div>
+        <div class="boretrakRight"><a href="#"><img src="images/delIcon.png" alt=""></a></div>
+      </div>
+      <div class="boretrakRow clearfix">
+        <div class="boretrakLeft">Boretrak 02</div>
+        <div class="boretrakRight"><a href="#"><img src="images/delIcon.png" alt=""></a></div>
+      </div>
+      <div class="boretrakRow clearfix">
+        <div class="boretrakLeft">Boretrak 03</div>
+        <div class="boretrakRight"><a href="#"><img src="images/delIcon.png" alt=""></a></div>
+      </div>
+      <div class="boretrakRow clearfix">
+        <div class="boretrakLeft">Boretrak 04</div>
+        <div class="boretrakRight"><a href="#"><img src="images/delIcon.png" alt=""></a></div>
+      </div>
+      <div class="boretrakRow clearfix">
+        <div class="boretrakLeft">Boretrak 05</div>
+        <div class="boretrakRight"><a href="#"><img src="images/delIcon.png" alt=""></a></div>
+      </div>
+    </div>
+  </div>
+  <!--Change Boretrak Type Popup-->
+  <div id="ChangeBoretrakType" class="selectModelPop" style="display: none;">
+    <a href="javascript:void(0);" data-target=".selectModelPop" class="closePop btnCloseSelectModel"><img src="images/btncloseGraph.png" alt=""></a>
+    <h5>Change Boretrak type</h5>
+    <h6>Select Boretraking method</h6>
+    <div class="addHoleRow clearfix">
+      <div class="addHoleCol fLeft">
+        <a class="btnBlock" href="#">Cabled</a>
+      </div>
+      <div class="addHoleCol fRight">
+        <a class="btnBlock" href="#">Rodded</a>
+      </div>
+    </div>
+  </div>
+  <!--View Azimuth Popup-->
+  <div id="ViewAzimuth" class="selectModelPop" style="display: none;">
+    <a href="javascript:void(0);" data-target=".selectModelPop" class="closePop btnCloseSelectModel"><img src="images/btncloseGraph.png" alt=""></a>
+    <h5>View Azimuth</h5>
+    <h6>Azimuth for Boretrak: 240.37°</h6>
+    <div class="addHoleRow clearfix">
+      <div class="addHoleCol fLeft">
+        <a class="btnBlock" href="#">Ok</a>
+      </div>
+      <div class="addHoleCol fRight">
+        <a class="btnBlock" href="#">Reset Line</a>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="js/jquery.strayos.js"></script>
+  <script>
+    // Timeline slider function
+    function timelineSLider(){
+      $("#timelineSlider").slider({
+        range: "min",
+        value: 22,
+        min: 1,
+        max: 100
+      });
+    }
+    $(function() {
+      timelineSLider();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+body{ background: #fff; }
+.head{ background: #efefef; padding: 10px; font-size: 22px; }
+.StyleGuide{ padding: 20px; }
+.StyleGuide h2{ font-size: 22px; position: relative; padding: 0 0 0 15px;}
+.StyleGuide h2::before{
+  width: 3px;
+  height: 20px;
+  content: "";
+  background: #3AC0BC;
+  position: absolute;
+  left: 0;
+  top:3px;
+}
+.cnt{ padding: 20px 0; }
+.cntRow{ display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin: 0 0 20px 0; padding: 10px; border:1px #eee solid;}
+.cntCol{ padding: 0 30px 0 0; flex:1;}

@@ -1,0 +1,28 @@
+<!-- <div class="header">
+  <a [routerLink]="['/']">Strayos</a>
+  <a [routerLink]="['/sign-in']" *ngIf="!(isAuthenticated$ | async)">Login</a>
+  <a [routerLink]="['/sign-up']" *ngIf="!(isAuthenticated$ | async)">Sign Up</a>
+  <span *ngIf="(isAuthenticated$ && currentUser$) | async; let currentUser else loading">
+    Hi {{ currentUser.name() }}!
+  </span>
+  <a [routerLink]="['/']" (click)="logout()" *ngIf="isAuthenticated$ | async">Logout</a>
+</div> -->
+
+<header class="header clearfix">
+  <ng-content></ng-content>
+  <div dropdown>
+    <a dropdownToggle class="user" *ngIf="(isAuthenticated$ && currentUser$) | async; let currentUser else loading">
+      <span></span>{{ currentUser.name() }}
+    </a>
+    <div *dropdownMenu class="dropdown-menu userAccount" role="menu">
+      <ul>
+        <li>
+          <a [routerLink]="['/']" (click)="logout()" *ngIf="isAuthenticated$ | async">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
+<ng-template #loading></ng-template>

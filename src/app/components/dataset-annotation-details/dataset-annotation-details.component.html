@@ -1,0 +1,84 @@
+<h5>{{name}}</h5>
+<div [ngSwitch]="tool">
+  <ng-container *ngSwitchCase="'Polygon'">
+    <div id="dvVolume" class="dvVolume clearfix">
+      <a data-target="dvVolume" class="btnExpandMap" href="#">&nbsp;</a>
+      <select id="volume" name="" class="selectpicker volume">
+        <option>Volume</option>
+        <option>Compare Volume</option>
+      </select>
+      <div class="dvCompareVolume clearfix">
+        <div class="compareVolumeCol fLeft">
+          <select name="" class="selectpicker w100">
+            <option>10 August 2017</option>
+          </select>
+        </div>
+        <div class="compareVolumeCol fRight">
+          <select name="" class="selectpicker w100">
+            <option>20 August 2017</option>
+          </select>
+        </div>
+      </div>
+      <div class="volumenRow clearfix">
+        <div class="volumeCol fill">
+          <span>Fill</span>
+          <span class="big">9.4 yd</span>
+        </div>
+        <div class="volumeCol net">
+          <span>Net</span>
+          <span class="big">52757.6 yd</span>
+        </div>
+        <div class="volumeCol cut">
+          <span>Cut</span>
+          <span class="big">52757.6 yd</span>
+        </div>
+      </div>
+      <p>Reference Elevation</p>
+      <select id="ReferenceElevation" name="" class="selectpicker w100">
+        <option>Select</option>
+        <option>Lowest Fit</option>
+        <option>Manual</option>
+        <option>Best Fit</option>
+      </select>
+      <div class="dvElevation clearfix">
+        <p>Elevation</p>
+        <div class="dvElevationRow clearfix">
+          <div class="dvElevationLeft">
+            <input class="txtInput" type="text" value="857.054">
+          </div>
+          <div class="dvElevationRight">
+            <a class="btnSelectPoint" href="#">Select Point</a>
+          </div>
+        </div>
+        <p class="small">Dobule click on map to select point</p>
+      </div>
+    </div>
+  </ng-container>
+  <ng-container *ngSwitchCase="'LineString'">
+    <div id="expandRow" class="layerRow clearfix">
+      <div class="clearfix">
+        <div class="layerRowLeft">
+          Height Graph
+        </div>
+        <div class="layerRowRight">
+          <label class="switch fRight">
+            <input data-target="#HeightGraph" type="checkbox" class="switchBtn" [(ngModel)]="showHeightGraph" (change)="toggleHeightGraph(showHeightGraph)"
+              checked="false">
+            <span class="switchSlider round"></span>
+          </label>
+        </div>
+      </div>
+      <div #heightGraphCont [hidden]="!showHeightGraph">
+        <canvas #heightGraph width="210" height="200"></canvas>
+      </div>
+    </div>
+    <div class="layerRow clearfix">
+      <h5>Horizontal (Planar) Length</h5>
+      <p [innerHTML]="horizontalLength"></p>
+    </div>
+    <div class="layerRow clearfix">
+      <h5>Surface (Spherical) Length</h5>
+      <p [innerHTML]="sphericalLength"></p>
+    </div>
+  </ng-container>
+</div>

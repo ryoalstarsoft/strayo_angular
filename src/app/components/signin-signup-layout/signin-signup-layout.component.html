@@ -1,0 +1,137 @@
+<header class="mainHeader clearfix">
+  <h1 class="mainLogo">
+    <a href="index.html">
+      <img src="images/Strayos-Logo-white.png" alt="">
+    </a>
+  </h1>
+  <a class="menu-button">
+    <div></div>
+    <div></div>
+    <div></div>
+  </a>
+  <div class="navigation">
+    <ul class="topNavi">
+      <li>
+        <a routerLink="/">Home</a>
+      </li>
+      <li>
+        <a href="https://www.strayos.com/solutions.html">Product</a>
+      </li>
+
+      <li dropdown>
+        <a dropdownToggle>Solutions</a>
+        <ul *dropdownMenu class="dropdown-menu">
+          <li>
+            <a href="https://www.strayos.com/industries.html">Quarry &amp; Blasting</a>
+          </li>
+          <li>
+            <a href="https://www.strayos.com/construction.html">Civil Engineering</a>
+          </li>
+          <li>
+            <a href="https://www.strayos.com/mining.html">Mining</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://www.strayos.com/about.html">About</a>
+      </li>
+      <li>
+        <a href="https://www.strayos.com/contact.html">Contact</a>
+      </li>
+      <li>
+        <a href="https://blog.strayos.com/">Blog</a>
+      </li>
+    </ul>
+    <ul class="log">
+      <li>
+        <a [class.active]="page == 'sign-in'" routerLink="/sign-in">Signin</a>
+      </li>
+      <li>
+        <a [class.active]="page == 'sign-up'" routerLink="/sign-up">Signup</a>
+      </li>
+    </ul>
+  </div>
+</header>
+<div class="wrapper clearfix">
+  <div class="formContOuter clearfix" [ngSwitch]="page">
+    <div class="formCont clearfix" *ngSwitchDefault>
+      <h3>Sign in</h3>
+      <form [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+        <div class="frmRow clearfix">
+          <label class="lbl">EMAIL ADDRESS</label>
+          <input formControlName="email" type="email" class="frmInput" placeholder="enter email address">
+        </div>
+        <div class="frmRow clearfix">
+          <label class="lbl fLeft">PASSWORD</label>
+          <!-- <a class="forgotPassword" href="reset-password.html">Forgot Password?</a> -->
+          <input formControlName="password" type="password" class="frmInput" placeholder="enter password">
+        </div>
+        <div class="submitBtnCont clearfix">
+          <button type="submit" [disabled]="!signInForm.valid" class="btnSubmit">Sign in</button>
+          <p>Don't have an account?
+            <a routerLink="/sign-up">Sign up for Strayos</a>
+          </p>
+        </div>
+      </form>
+    </div>
+    <div class="formCont clearfix" *ngSwitchCase="'sign-up'">
+      <h3>Sign up</h3>
+      <form [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
+
+        <div class="frmRow clearfix">
+          <!-- value: {{signUpForm.get('firstName').value | json }} status: {{signUpForm.get('firstName').status | json}} errors: {{signUpForm.get('firstName').errors
+          | json}} -->
+          <label class="lbl">FIRST NAME</label>
+          <input formControlName="firstName" type="text" class="frmInput" placeholder="enter full name" required>
+        </div>
+        <div class="frmRow clearfix">
+          <!-- status: {{signUpForm.get('lastName').status | json}} errors: {{signUpForm.get('lastName').errors | json}} -->
+          <label class="lbl">LAST NAME</label>
+          <input formControlName="lastName" type="text" class="frmInput" placeholder="enter full name">
+        </div>
+        <div class="frmRow clearfix">
+          <!-- status: {{signUpForm.get('email').status | json}} errors: {{signUpForm.get('email').errors | json}} -->
+          <label class="lbl">EMAIL ADDRESS</label>
+          <input formControlName="email" type="email" class="frmInput" placeholder="enter email address">
+        </div>
+        <div class="frmRow clearfix">
+          <!-- status: {{signUpForm.get('industry').status | json}} errors: {{signUpForm.get('industry').errors | json}} -->
+          <label class="lbl">INDUSTRY</label>
+          <input formControlName="industry" type="text" class="frmInput" placeholder="enter your industry" />
+        </div>
+        <div class="frmRow clearfix">
+          <!-- status: {{signUpForm.get('password').status | json}} errors: {{signUpForm.get('password').errors | json}} -->
+          <label class="lbl">PASSWORD</label>
+          <span class="forgotPassword" *ngIf="signUpForm.get('password').hasError('validateEqual')">Passwords do not match!</span>
+          <input formControlName="password" type="password" class="frmInput" placeholder="enter password">
+        </div>
+        <div class="frmRow clearfix">
+          <!-- status: {{signUpForm.get('confirmPassword').status | json}} errors: {{signUpForm.get('confirmPassword').errors | json}} -->
+          <p class="danger" [hidden]="passwordMatch">Passwords do not match</p>
+          <label class="lbl">CONFIRM PASSWORD</label>
+          <input formControlName="confirmPassword" type="password" class="frmInput" placeholder="re-enter password">
+        </div>
+        <div class="frmRow noPadding clearfix">
+          <div class="checkbox checkbox-info">
+            <!-- status: {{signUpForm.get('isPolicyAccepted').status | json}} errors: {{signUpForm.get('isPolicyAccepted').errors | json}} -->
+            <p class="danger" [hidden]="signUpForm.pristine || signUpForm.get('isPolicyAccepted').value">Accept private policy to continue</p>
+            <input formControlName="isPolicyAccepted" type="checkbox" id="terms">
+            <label for="terms" class="txtTerms">I agree to Strayos
+              <a href="https://www.strayos.com/privacy-policy.html">Privacy Policy</a> and
+              <a href="https://www.strayos.com/terms-of-use.html">Terms &amp; Conditions</a>
+            </label>
+          </div>
+        </div>
+        <p class="danger" *ngIf="!signUpForm.pristine && !signUpForm.valid">PLEASE FILL OUT ALL FIELDS</p>
+        <div class="submitBtnCont clearfix">
+          <button type="submit" [disabled]="!passwordMatch || signUpForm.pristine || !signUpForm.valid" class="btnSubmit">Sign up!</button>
+          <p>Already have an account?
+            <a routerLink="/sign-in">Sign in for Strayos</a>
+          </p>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

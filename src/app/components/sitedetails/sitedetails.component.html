@@ -1,0 +1,27 @@
+<div class="sites">
+  <div href="javascript:void(0);" class="siteInfo">
+    <ul class="siteDetails">
+      <li><a class="siteEdit" href="#">Edit</a></li>
+      <li><a class="siteShare" href="#">Share</a></li>
+      <li><a class="siteDelete" href="#">Delete</a></li>
+    </ul>
+  </div>
+  <h4><a [routerLink]="['/sites', site.id()]">{{site.name()}}</a></h4>
+  <h6>{{site.location()}}</h6>
+  <p>Total Projects: <span>{{site.datasets().length}}</span></p>
+  <div class="statusRow clearfix">
+    <div class="statusRowLeft">
+      <p>Added on: <span>{{site.createdAt() | date: 'd MMMM yyyy'}}</span></p>
+    </div>
+    <div class="statusRowRight">
+      <p>Status: <a class="btnComplete" href="#">{{status}}</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="detail-box">
+  <h4><a [routerLink]="['/sites', site.id()]">{{site.name()}}</a></h4>
+  <strong>{{site.location()}}</strong>
+  <span>Added on <strong>{{site.createdAt() | date : medium}}</strong></span>
+  <span>Status: <strong>{{site.status()}}</strong></span>
+</div> -->

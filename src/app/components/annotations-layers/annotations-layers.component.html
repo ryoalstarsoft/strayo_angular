@@ -1,0 +1,14 @@
+<div class="dvLeft">
+  <tabset #staticTabs [justified]='true'>
+    <tab heading="Annotations" customClass="my-nav-link" (select)="onTabSwitch()">
+      <app-annotations-controller class="tabContent clearfix"></app-annotations-controller>
+    </tab>
+    <tab heading="Layers" (select)="onTabSwitch()">
+      <div class="dvAnnotation clearfix">
+        <app-layers-controller class="tabContent clearfix">
+
+        </app-layers-controller>
+      </div>
+    </tab>
+  </tabset>
+</div>

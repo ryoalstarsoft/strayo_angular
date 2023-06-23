@@ -1,0 +1,9 @@
+.dropdown-menu {
+    top: auto;
+    left: auto;
+}
+
+.dropdown-menu li {
+    display: inherit;
+    float: initial;
+}

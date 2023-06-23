@@ -1,0 +1,121 @@
+<div class="main contentWrapper clearfix">
+  <div *ngIf="shotplan else loading">
+    <!-- Flip shot -->
+    <div class="contentBox clearfix">
+      <h5>Flips the calculated blast direction.</h5>
+      <p class="txtSmall">WARNING: this will delete all holes and rows!</p>
+      <a class="btnBlock" href="#">Flip Shot</a>
+    </div>
+    <!-- Rows  -->
+    <div class="contentBox noPadding clearfix">
+      <div class="clearfix p10">
+        <div class="rows clearfix">
+          <div class="rowsLeft">Row</div>
+          <div class="rowsRight">
+            <a id="toggleRow" class="btnToggle" [ngClass]="{ up: selectedRow >= 0 }" (click)="selectRow(selectedRow >= 0 ? selectedRow : 0)"
+              href="javascript:void(0);">
+              <img src="/assets/images/BtnRoundArrow.png" alt="">
+            </a>
+          </div>
+        </div>
+        <p class="txtSmall">Please click on any
+          <span>row</span> to
+          <span>add new row(s)</span>
+        </p>
+        <div class="rowsWrapper clearfix">
+          <div *ngFor="let item of shotplan.rows$ | async; let i = index;" [ngClass]="{ btnRows: true, activeHole: i === selectedRow }"
+            (click)="selectRow(i)">
+            <span>{{ (i == 0) ? 'A-B Line' : 'Row ' + i }}</span>
+            <a class="delbtnRows" *ngIf="i != 0"></a>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="(shotplan.rows$ | async)[selectedRow]; let row else nothing" class="tabBox clearfix">
+        <div class="holeTabs clearfix">
+          <a class="tabLink activeTab" href="#Offset">Offset</a>
+          <a class="tabLink" href="#Endpoints">Endpoints</a>
+        </div>
+        <div class="tabOuterCont clearfix">
+          <div id="Offset" class="tabCont clearfix" style="display: block;">
+            <p id="txtEndpoints" class="txtSmall">Use
+              <span>"Endpoints"</span> tab to move the reference line Azimuth based on true north:
+              <span>{{((row.rowUpdate$() | async).azimuth$ | async)}}</span>
+            </p>
+            <div class="clearfix" id="dvRowEdit" style="display: none;">
+              <div class="rowHeading clearfix">
+                <div class="rowHeadingLeft">Distance from
+                  <span>Row 1</span>
+                </div>
+                <div class="rowHeadingRight">1m</div>
+              </div>
+              <div class="addHoleRow clearfix">
+                <div class="addHoleCol fLeft">
+                  <label class="lblHole">Along shotline</label>
+                  <p class="m">
+                    <input type="text" class="txtInput2" name="">
+                  </p>
+                </div>
+                <div class="addHoleCol fRight">
+                  <label class="lblHole">Away from shotline</label>
+                  <input class="txtInput2" type="text" name="">
+                </div>
+              </div>
+              <div class="rowHeading clearfix">
+                <div class="rowHeadingLeft">Distance from
+                  <span>Row 2</span>
+                </div>
+                <div class="rowHeadingRight">1m</div>
+              </div>
+              <div class="addHoleRow clearfix">
+                <div class="addHoleCol fLeft">
+                  <label class="lblHole">Along shotline</label>
+                  <p class="m">
+                    <input type="text" class="txtInput2" name="">
+                  </p>
+                </div>
+                <div class="addHoleCol fRight">
+                  <label class="lblHole">Away from shotline</label>
+                  <input class="txtInput2" type="text" name="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="Endpoints" class="tabCont clearfix">
+            <a href="#" class="btnBlock">Move End Points</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div *ngIf="(shotplan.rows$ | async)[selectedRow]; let row; else nothing" class="contentBox noPadding clearfix">
+      <div class="clearfix p10">
+        <div class="rows clearfix">
+          <div class="rowsLeft">Holes</div>
+          <div class="rowsRight">
+            <a id="toggleHole" class="btnToggle" href="javascript:void(0);">
+              <img src="images/BtnRoundArrow.png" alt="">
+            </a>
+          </div>
+        </div>
+        <p class="txtSmall">Please select any
+          <span>Hole</span> to
+          <span>add new hole(s)</span>
+        </p>
+        <div class="holseWrapper clearfix">
+          <div *ngFor="let hole of row.holes$ | async; let i = index;" [ngClass]="{btnHoles: true, activeHole: i === selectedHole}"
+            (click)="selectHole(i)">
+            <span class="txtHole">Hole {{i}}</span>
+            <a class="delbtnHoles" href="#"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <app-shotplanning-tool [dataset]="dataset"></app-shotplanning-tool>
+</ng-template>
+
+<ng-template #nothing>
+</ng-template>

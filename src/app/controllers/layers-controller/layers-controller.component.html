@@ -1,0 +1,125 @@
+<div class="main">
+  <div *ngIf="mainDataset$ | async; let mainDataset else loading">
+    <div *ngIf="datasets$ | async; let datasets else loading">
+      <tabset>
+        <tab *ngFor="let dataset of datasets"
+          [heading]="dataset.name()"
+        >
+          <ng-template tabHeading>
+            <span>{{dataset.name()}}</span>
+            <rating *ngIf="dataset.id() == (mainDataset)?.id()" [ngModel]="1" [max]="1" [readonly]="true"></rating>
+          </ng-template>
+         <app-dataset-layer [dataset]="dataset"></app-dataset-layer>
+        </tab>
+      </tabset>
+    </div>
+  </div>
+  <ng-template #loading>Loading</ng-template>
+  <!--
+  <div class="layerRow clearfix">
+    <div class="clearfix">
+      <div class="layerRowLeft">
+        Camera Position
+      </div>
+      <div class="layerRowRight">
+        <label class="switch fRight">
+          <input type="checkbox">
+          <span class="switchSlider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <h5>Elevation Heat Map</h5>
+  <div class="layerRow clearfix">
+    <div class="clearfix">
+      <div class="layerRowLeft">
+        Digital Elevation Model
+      </div>
+      <div class="layerRowRight">
+        <label class="switch fRight">
+          <input data-target="#HeatMap" class="switchBtn" type="checkbox" checked>
+          <span class="switchSlider round"></span>
+        </label>
+      </div>
+    </div>
+    <div id="HeatMap" class="mapCont clearfix">
+      <div class="mapWrap clearfix">
+        <img src="/assets/images/elevationModel-map.png" alt="">
+      </div>
+      <h4>Opacity</h4>
+      <div class="rangeSliderOuter">
+        <div id="slider" class="rangeSlider"></div>
+      </div>
+      <div class="percent clearfix">
+        <span class="fLeft">0%</span>
+        <span class="fRight">100%</span>
+      </div>
+    </div>
+  </div>
+  <div class="layerRow clearfix">
+    <div class="clearfix">
+      <div class="layerRowLeft">
+        Digital Terrain Model
+      </div>
+      <div class="layerRowRight">
+        <label class="switch fRight">
+          <input type="checkbox">
+          <span class="switchSlider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="layerRow clearfix">
+    <div class="clearfix">
+      <div class="layerRowLeft">
+        Coloured Hilshade
+      </div>
+      <div class="layerRowRight">
+        <label class="switch fRight">
+          <input type="checkbox">
+          <span class="switchSlider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <h5>Contour</h5>
+  <div class="layerRow clearfix">
+    <div class="clearfix">
+      <div class="layerRowLeft">
+        Contour 5000 ft.
+      </div>
+      <div class="layerRowRight">
+        <label class="switch fRight">
+          <input type="checkbox">
+          <span class="switchSlider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="layerRow clearfix">
+    <div class="clearfix">
+      <div class="layerRowLeft">
+        Contour 10000 ft.
+      </div>
+      <div class="layerRowRight">
+        <label class="switch fRight">
+          <input type="checkbox">
+          <span class="switchSlider round"></span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="layerRow clearfix">
+    <div class="clearfix">
+      <div class="layerRowLeft">
+        Contour 20000 ft.
+      </div>
+      <div class="layerRowRight">
+        <label class="switch fRight">
+          <input type="checkbox">
+          <span class="switchSlider round"></span>
+        </label>
+      </div>
+    </div>
+  </div> -->
+</div>

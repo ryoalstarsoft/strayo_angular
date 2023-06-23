@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Strayos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="css/bundle.css">
+  <script src="js/modernizr-custom.js"></script>
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body class="uploadProcess">
+  <div class="uploadContainer clearfix">
+    <div class="dvUploadProcess clearfix">
+      <a href="#" class="btnPageClose"><img src="images/pageCloseBtn.png" alt=""></a>
+      <h2 class="heading">Upload Project</h2>
+      <div class="processTab clearfix">
+        <ul class="clearfix">
+          <li>
+            <a href="upload-process.html">
+              <span class="txtNum complete">01</span>
+              <span class="txtTab">Select Site</span>
+              <div class="arrow-down"></div>
+            </a>
+          </li>
+          <li>
+            <a href="add-images.html">
+              <span class="txtNum complete">02</span>
+              <span class="txtTab">Add Images</span>
+              <div class="arrow-down"></div>
+            </a>
+          </li>
+          <li>
+            <a href="review.html" class="activeProcess last">
+              <span class="txtNum">03</span>
+              <span class="txtTab">Review</span>
+              <div class="arrow-down"></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="processContent clearfix">
+        <div class="row clearfix">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="checkRequest clearfix">
+              <h4>Please check your request and click upload if all things are fine</h4>
+              <div class="requestDetails clearfix">
+                <div class="requestDetailsCol">
+                  <h6>Site</h6>
+                  <p>Sample test site 1</p>
+                </div>
+                <div class="requestDetailsCol">
+                  <h6>Date</h6>
+                  <p>Dec 15, 2017 09:17 IST </p>
+                </div>
+                <div class="requestDetailsCol">
+                  <h6>Image Details</h6>
+                  <p>23 Photos</p>
+                </div>
+                <div class="requestDetailsCol">
+                  <h6>Images Size</h6>
+                  <p>120.40 Mb</p>
+                </div>
+              </div>
+            </div>
+            <div class="addedImagesCont clearfix">
+              <div class="imageHeader clearfix">
+                <div class="imgNum"><span>23 images</span> added</div>
+                <div class="imgDetails">
+                  <a href="javascript:void(0);" class="removeImg" data-toggle="modal" data-target="#myModal">Remove Images</a>
+                  <a href="javascript:void(0);" class="viewImg" data-toggle="modal" data-target="#myModal">View Images</a>
+                </div>
+              </div>
+              <div class="imgCont">
+                <div class="path">
+                  <div class="imgPath"></div>
+                  <img src="images/path.png" alt="">
+                </div>
+                <img src="images/uploaded-bg.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row clearfix">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="buttonRow clearfix">
+              <a href="add-images.html" class="backBttn">Back</a>
+              <a href="uploading-progress.html" class="btnNext">Upload</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="imgPop" id="popuup_div">
+    <a class="popCloseBtn" href="javascript:void(0);"><img src="images/popCloseBtn.png" alt=""></a>
+    <div class="imgName">DJI_0007.JPG</div>
+    <div class="placeHolder"><img src="images/latitude.png" alt=""></div>
+    <div class="imgDesc clearfix">
+      <div class="imgDescLeft">
+        <p>Latitude: <span>33.2788991°</span></p>
+        <p>Longitude: <span>-97.8221853°</span></p>
+        <p>Altitude: <span>343.625 meters</span></p>
+      </div>
+      <div class="imgDescRight"><a href="#"><img src="images/traceIcon.png" alt=""></a></div>
+    </div>
+    <span class="dnArrow"><img src="images/dnArrow.png" alt=""></span>
+  </div>
+  <!-- Images list Popup -->
+  <!-- Modal -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header imagePopup">
+          <a href="javascript:void(0);" class="modalClose" data-dismiss="modal"><img src="images/btnCloseProject.png" alt=""></a>
+          <h4 class="modal-title leftAlign">Images List</h4>
+        </div>
+        <div class="popHeader clearfix">
+          <div class="popHeaderLeft">23 Photos added</div>
+          <a href="javascript:void(0);" class="removeImg" style="border:0; float:right; margin:0; padding:0 0 0 25px;">Remove Images</a>
+        </div>
+        <div class="modal-body imagePopup clearfix">
+          <div class="popImgBody clearfix">
+            <div class="popImgRow clearfix">
+              <div class="_imgName">DJI_0004.JPG</div>
+              <a class="_deleteIcon" href="#"><img src="images/traceIcon.png" alt=""></a>
+            </div>
+            <div class="popImgRow clearfix">
+              <div class="_imgName">DJI_0004.JPG</div>
+              <a class="_deleteIcon" href="#"><img src="images/traceIcon.png" alt=""></a>
+            </div>
+            <div class="popImgRow clearfix">
+              <div class="_imgName">DJI_0004.JPG</div>
+              <a class="_deleteIcon" href="#"><img src="images/traceIcon.png" alt=""></a>
+            </div>
+            <div class="popImgRow clearfix">
+              <div class="_imgName">DJI_0004.JPG</div>
+              <a class="_deleteIcon" href="#"><img src="images/traceIcon.png" alt=""></a>
+            </div>
+            <div class="popImgRow clearfix">
+              <div class="_imgName">DJI_0004.JPG</div>
+              <a class="_deleteIcon" href="#"><img src="images/traceIcon.png" alt=""></a>
+            </div>
+            <div class="popImgRow clearfix">
+              <div class="_imgName">DJI_0004.JPG</div>
+              <a class="_deleteIcon" href="#"><img src="images/traceIcon.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.strayos.js"></script>
+  <script>
+    function openPopup(){
+      $(".imgPath").each(function(){
+        $(this).on("click", function(e){
+          //getting height and width of the message box
+          var height = $('#popuup_div').height();
+          var width = $('#popuup_div').width();
+          //calculating offset for displaying popup message
+          leftVal=e.pageX-(width/2+10)+"px";
+          topVal=e.pageY-(height+32)+"px";
+          //show the popup message and hide with fading effect
+          $('#popuup_div').css({left:leftVal,top:topVal}).fadeIn();
+        });
+        $(".popCloseBtn").on("click", function(){
+          $(this).closest(".imgPop").fadeOut();
+        });
+      });
+    }
+    $(function(){
+      openPopup();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+.signupWrapper {
+    padding: 80px 0;
+}
+
+.signupCont {
+    max-width: 970px;
+    margin: 0 auto;
+    border:1px #9B9B9B solid;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    padding: 50px 100px;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+
+    & ::-webkit-input-placeholder,
+    & :-moz-placeholder,
+    & ::-moz-placeholder,
+    & :-ms-input-placeholder,
+    & :placeholder-shown {
+        color: #9B9B9B;
+    }
+
+    & :-moz-placeholder {
+        opacity: 1;
+    }
+
+    & ::-moz-placeholder {
+        opacity: 1;
+    }
+}
+
+.submitRow {
+    text-align: center;
+
+    p {
+        margin: 20px 0 0 0;
+        font-size: 18px;
+        color: #000;
+
+        a {
+            color: #008581;
+        }
+    }
+}
+.page-wrap {
+    background: #fff;
+}
+.loginHeader {
+    padding: 110px 0 0 0;
+    text-align: center;
+
+    h3 {
+        font-family: 'proxima_novabold', Arial;
+        font-size: 45px;
+        line-height: 55px;
+        color: #000;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .signupWrapper {
+        padding: 40px 20px;
+    }
+
+    .signupCont {
+        border: 0;
+        padding: 0;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+    .loginHeader {
+        padding: 100px 0 0 0;
+
+        h3 {
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .signupWrapper {
+        padding: 60px 50px;
+    }
+
+    .loginHeader {
+        padding: 120px 0 0 0;
+    }
+}
+
+.btnFrmSubmit{
+  display: inline-block;
+  font-family: 'Conv_proxima-nova-semibold', Arial;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 12px 66px;
+  color: #fff;
+  outline: 0;
+  border:0;
+  background: rgb(56,151,213);
+  background: -moz-linear-gradient(top, rgba(56,151,213,1) 0%, rgba(26,94,171,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(56,151,213,1) 0%,rgba(26,94,171,1) 100%);
+  background: linear-gradient(to bottom, rgba(56,151,213,1) 0%,rgba(26,94,171,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3897d5', endColorstr='#1a5eab',GradientType=0 );
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+
+.btnFrmSubmit[disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.btnLogin {
+  display: inline-block;
+  width: 110px;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 0 0 0 20px;
+  outline: 0;
+  border: 0;
+  background: rgb(56,151,213);
+  background: -moz-linear-gradient(top, rgba(56,151,213,1) 0%, rgba(26,94,171,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(56,151,213,1) 0%,rgba(26,94,171,1) 100%);
+  background: linear-gradient(to bottom, rgba(56,151,213,1) 0%,rgba(26,94,171,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3897d5', endColorstr='#1a5eab',GradientType=0 );
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+}
+
+.header {
+  width: 100%;
+  height: 96px;
+  background: #fff;
+  padding: 0 50px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+  .headerRight {
+    float: right;
+  }
+  .topNav {
+    display: inline-block;
+    li {
+      display: inline-block;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 300;
+      margin: 0 0 0 20px;
+      position: relative;
+      a {
+        display: block;
+        color: #008581;
+        padding: 38px 0;
+        transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        &:hover {
+          color: #000;
+        }
+      }
+      a.activeNav {
+        color: #000;
+      }
+      ul {
+        width: 200px;
+        position: absolute;
+        left: 0;
+        top: 96px;
+        background: #fff;
+        text-align: left;
+        padding: 10px 0 0 0;
+        display: none;
+        box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
+        -webkit-box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
+        li {
+          display: block;
+          margin: 0 0 20px 0;
+          a {
+            padding: 0 15px;
+          }
+        }
+      }
+      &:hover {
+        ul {
+          display: block;
+        }
+      }
+    }
+  }
+  .strayosLogo {
+    display: inline-block;
+    float: left;
+    margin: 26px 0 0 0;
+    position: relative;
+    z-index: 999;
+    a {
+      display: block;
+      img {
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@media (min-width:320px) and (max-width:767px) {
+  .header {
+    height: 80px;
+    padding: 0 20px;
+    .btnLogin {
+      width: 140px;
+      height: 38px;
+      line-height: 38px;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .strayosLogo {
+      margin: 20px 0 0 0;
+      width: 110px;
+    }
+    .btnMobileNav {
+      display: block;
+    }
+    .headerRight {
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: #fff;
+      display: none;
+    }
+    .topNav {
+      display: block;
+      text-align: center;
+      padding: 80px 0 20px 0;
+      li {
+        font-size: 16px;
+        margin: 0;
+        display: block;
+        a {
+          padding: 12px 0;
+        }
+        ul {
+          height: auto;
+          top: 80px;
+          padding: 0;
+          display: block;
+          position: relative;
+          top: auto;
+          left: auto;
+          background: none;
+          text-align: center;
+          width: 100%;
+          box-shadow: none;
+          -moz-box-shadow: none;
+          -webkit-box-shadow: none;
+          li {
+            display: block;
+            margin: 0;
+            a {
+              color: #1A5EAB;
+              padding: 7px 0;
+            }
+          }
+        }
+      }
+    }
+    .spn {
+      display: block;
+      text-align: center;
+      margin: 0 0 20px 0;
+    }
+  }
+}
+@media (min-width:768px) and (max-width:1024px) {
+  .header {
+    height: 80px;
+    padding: 0 20px;
+    .btnLogin {
+      width: 90px;
+      font-size: 14px;
+      margin: 0 0 0 10px;
+    }
+
+    .strayosLogo {
+      margin: 20px 0 0 0;
+      width: 110px;
+    }
+    .topNav {
+      li {
+        font-size: 14px;
+        margin: 0 0 0 10px;
+        a {
+          padding: 31px 0;
+        }
+        ul {
+          top: 80px;
+        }
+      }
+    }
+  }
+}

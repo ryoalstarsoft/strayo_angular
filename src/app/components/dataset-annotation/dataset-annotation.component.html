@@ -1,0 +1,16 @@
+<div class="savedRow clearfix" [ngClass]="editMode ? 'editMode' : ''">
+  <div class="savedCol1">
+   <ng-content></ng-content>
+  </div>
+  <div class="savedCol2" [ngClass]="toolToThumbnail[meta.tool]"><input type="text" [(ngModel)]="meta.name" /></div>
+  <div class="savedCol3">
+    <a href="javascript:void()" (click)="toggleEditMode()">
+      <img src="/assets/images/editIcon.png" alt="">
+    </a>
+  </div>
+  <div class="savedCol4">
+    <a href="#">
+      <img src="/assets/images/delIcon.png" alt="">
+    </a>
+  </div>
+</div>

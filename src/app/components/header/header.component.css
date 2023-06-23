@@ -1,0 +1,10 @@
+.userAccount {
+    margin-left: calc(100vw - 160px);
+    top: 62px;
+}
+
+.user {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+}
